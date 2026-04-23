@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from flask import Flask
-from app.models import db
+from app.database import db
 from app.config import config
 from app.routes.user_routes import users
 from app.routes.rol_routes import roles
