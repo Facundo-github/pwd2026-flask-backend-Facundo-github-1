@@ -25,7 +25,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     networks:
       - pwd_network
-  pgdamin:
+  pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin_pwd
     ports:
@@ -33,7 +33,6 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE}
     depends_on:
       - db
     volumes:
